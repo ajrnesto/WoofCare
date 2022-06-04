@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_down_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_left_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_right_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_small_right_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/baseline_add_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/bg_chip_state.xml" value="0.1715" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/book_alt_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/calendar_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/feather_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/ic_logo_primary_gray_bg.xml" value="0.191" />
@@ -27,6 +29,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/activity_authentication.xml" value="0.25" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/activity_startup.xml" value="0.14" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_event.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_pet.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_pet.xml" value="0.13" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_memories.xml" value="0.1341216216216216" />
