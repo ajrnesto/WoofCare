@@ -26,6 +26,7 @@
 
     <style name="WoofCare.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
         <item name="backgroundTint">?colorSecondaryVariant</item>
+        <item name="iconTint">?colorPrimary</item>
         <item name="android:textColor">?colorPrimary</item>
         <item name="fontFamily">@font/plusjakartasans_regular</item>
         <item name="android:textSize">14sp</item>
@@ -35,5 +36,16 @@
         <item name="backgroundTint">?colorPrimary</item>
         <item name="iconTint">?colorOnPrimary</item>
         <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="WoofCare.Button.Floating.Extended.Tonal" parent="Widget.Material3.ExtendedFloatingActionButton.Primary">
+        <item name="backgroundTint">?colorSecondaryVariant</item>
+        <item name="iconTint">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="shapeAppearance">@style/WoofCare.Button.Floating.Extended.ShapeAppearance</item>
+    </style>
+
+    <style name="WoofCare.Button.Floating.Extended.ShapeAppearance" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="cornerRadius">16dp</item>
     </style>
 </resources>

@@ -85,7 +85,7 @@
             style="@style/WoofCare.DropDownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:hint="Sex"
             app:layout_constraintEnd_toStartOf="@+id/tilBirthday"
             app:layout_constraintHorizontal_bias="0.5"

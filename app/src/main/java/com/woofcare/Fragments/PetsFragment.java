@@ -66,10 +66,10 @@ public class PetsFragment extends Fragment implements com.woofcare.Adapters.PetA
         loadRecyclerView();
 
         ebtnAddPet.setOnClickListener(view -> {
-            AddPetFragment viewApplicationFragment = new AddPetFragment();
+            AddPetFragment addPetFragment = new AddPetFragment();
             ((FragmentActivity) requireContext()).getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.zoom_in_enter, R.anim.zoom_in_exit, R.anim.zoom_out_enter, R.anim.zoom_out_exit)
-                    .replace(R.id.frameLayout, viewApplicationFragment, "ADD_PET")
+                    .replace(R.id.frameLayout, addPetFragment, "ADD_PET")
                     .addToBackStack(null)
                     .commit();
         });

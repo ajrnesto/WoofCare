@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvEvents"
+            android:id="@+id/rvMemories"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:paddingVertical="18dp"
@@ -40,13 +40,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/ebtnAddEvent"
+            android:id="@+id/ebtnAddMemory"
             style="@style/WoofCare.Button.Floating.Extended"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Add an Event"
+            android:text="Add a Memory"
             app:icon="@drawable/baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

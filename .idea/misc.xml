@@ -11,6 +11,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/bg_chip_state.xml" value="0.1715" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/book_alt_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/calendar_24.xml" value="0.191" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/cross_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/feather_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/ic_logo_primary_gray_bg.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/ic_woof_care_on_primary.xml" value="0.191" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/outline_navigate_next_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/paw_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/pencil_24.xml" value="0.191" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/picture_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/round_female_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/round_logout_24.xml" value="0.145" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/round_save_24.xml" value="0.191" />
@@ -31,7 +33,11 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/activity_startup.xml" value="0.14" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_event.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_pet.xml" value="0.22" />
-        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_pet.xml" value="0.13" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_photo.xml" value="0.2" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/dialog_full_image.xml" value="0.12" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_event.xml" value="0.15" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_memory.xml" value="0.14" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_pet.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_memories.xml" value="0.1341216216216216" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_pets.xml" value="0.16" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_profile.xml" value="0.1341216216216216" />

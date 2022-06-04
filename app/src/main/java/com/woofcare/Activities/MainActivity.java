@@ -28,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
+import com.woofcare.Fragments.AddMemoryFragment;
 import com.woofcare.Fragments.AddPetFragment;
 import com.woofcare.Fragments.PetsFragment;
 import com.woofcare.Fragments.MemoriesFragment;
@@ -83,8 +84,13 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.addOnBackStackChangedListener(() -> {
             AddPetFragment addPetFragment = (AddPetFragment) getSupportFragmentManager().findFragmentByTag("ADD_PET");
+            AddMemoryFragment addMemoryFragment = (AddMemoryFragment) getSupportFragmentManager().findFragmentByTag("ADD_MEMORY");
 
             if (addPetFragment != null && addPetFragment.isVisible()) {
+                tvActivityTitle.setText("");
+                cvActionBar.setVisibility(View.VISIBLE);
+            }
+            else if (addMemoryFragment != null && addMemoryFragment.isVisible()) {
                 tvActivityTitle.setText("");
                 cvActionBar.setVisibility(View.VISIBLE);
             }

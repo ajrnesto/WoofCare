@@ -1,15 +1,15 @@
 package com.woofcare.Objects;
 
-public class Event {
+public class Memory {
     String uid;
     String title;
     long timestamp;
     String journal;
 
-    public Event() {
+    public Memory() {
     }
 
-    public Event(String uid, String title, long timestamp, String journal) {
+    public Memory(String uid, String title, long timestamp, String journal) {
         this.uid = uid;
         this.title = title;
         this.timestamp = timestamp;
