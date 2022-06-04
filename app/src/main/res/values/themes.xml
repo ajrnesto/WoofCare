@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WoofCare" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_oracle</item>
+        <item name="colorPrimaryVariant">@color/blue_oracle</item>
+        <item name="colorOnPrimary">@color/white_azure</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_ocean_drive</item>
+        <item name="colorSecondaryVariant">@color/white_azure</item>
+        <item name="colorOnSecondary">@color/blue_oracle</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowBackground">@color/gray</item>
+        <!-- Customize your theme here.
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item> -->
+    </style>
+</resources>

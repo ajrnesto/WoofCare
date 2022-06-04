@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388643469222",
+    "firebase_url": "https://woofcare-6ea6c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "woofcare-6ea6c",
+    "storage_bucket": "woofcare-6ea6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388643469222:android:a21cd67bceab1728680167",
+        "android_client_info": {
+          "package_name": "com.woofcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388643469222-6bjmjg03ik7hu8cgji6mgj0rhamlg0ld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZISGx3leDxJx5jiMNhXylhz-Up0HZT8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388643469222-6bjmjg03ik7hu8cgji6mgj0rhamlg0ld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

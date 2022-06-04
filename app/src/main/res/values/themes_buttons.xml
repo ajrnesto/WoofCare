@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WoofCare.Button" parent="Widget.Material3.Button">
+        <item name="fontFamily">@font/plusjakartasans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">?colorOnPrimary</item>
+    </style>
+
+    <style name="WoofCare.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="fontFamily">@font/plusjakartasans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="iconTint">?colorPrimary</item>
+        <item name="strokeColor">?colorPrimary</item>
+    </style>
+
+    <style name="WoofCare.Button.Icon" parent="Widget.Material3.Button.IconButton">
+        <item name="iconSize">14dp</item>
+        <item name="fontFamily">@font/plusjakartasans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="iconTint">?colorPrimary</item>
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="android:backgroundTint">?colorOnPrimary</item>
+    </style>
+
+    <style name="WoofCare.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="backgroundTint">?colorSecondaryVariant</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="fontFamily">@font/plusjakartasans_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="WoofCare.Button.Floating.Extended" parent="Widget.Material3.ExtendedFloatingActionButton.Primary">
+        <item name="backgroundTint">?colorPrimary</item>
+        <item name="iconTint">?colorOnPrimary</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+</resources>
