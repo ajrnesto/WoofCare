@@ -9,10 +9,10 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="16dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         app:cardElevation="2.4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,17 +38,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="12dp"
                 android:fontFamily="@font/plusjakartasans_medium"
                 android:maxWidth="130dp"
                 android:text="A very long dog name"
                 android:textAlignment="center"
                 android:textColor="?colorPrimary"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivPhoto" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/WoofCare.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:focusable="false"
+                android:minHeight="0dp"
+                android:paddingVertical="0dp"
+                android:text="View schedules"
+                app:icon="@drawable/angle_right_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

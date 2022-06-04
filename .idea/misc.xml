@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_left_24.xml" value="0.191" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_right_24.xml" value="0.191" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/angle_small_right_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/baseline_add_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/bg_chip_state.xml" value="0.1715" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/calendar_24.xml" value="0.191" />
@@ -12,6 +14,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/ic_woof_care_on_primary.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/menu_burger_24.xml" value="0.1" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/outline_arrow_right_alt_24.xml" value="0.191" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/outline_navigate_next_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/paw_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/pencil_24.xml" value="0.191" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/drawable-v24/round_female_24.xml" value="0.191" />

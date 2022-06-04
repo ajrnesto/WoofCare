@@ -53,7 +53,7 @@ public class PetsFragment extends Fragment implements com.woofcare.Adapters.PetA
     public void onResume() {
         super.onResume();
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setTitle("Pets");
-        NavigationView navigationView = (NavigationView) requireActivity().findViewById(R.id.navView);
+        NavigationView navigationView = requireActivity().findViewById(R.id.navView);
         navigationView.setCheckedItem(R.id.miPets);
     }
 
@@ -67,7 +67,6 @@ public class PetsFragment extends Fragment implements com.woofcare.Adapters.PetA
 
         ebtnAddPet.setOnClickListener(view -> {
             AddPetFragment viewApplicationFragment = new AddPetFragment();
-
             ((FragmentActivity) requireContext()).getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(R.anim.zoom_in_enter, R.anim.zoom_in_exit, R.anim.zoom_out_enter, R.anim.zoom_out_exit)
                     .replace(R.id.frameLayout, viewApplicationFragment, "ADD_PET")
@@ -132,6 +131,15 @@ public class PetsFragment extends Fragment implements com.woofcare.Adapters.PetA
 
     @Override
     public void onPetClick(int position) {
+        Bundle petUid = new Bundle();
+        petUid.putString("pet_uid", arrPets.get(position).getUid());
 
+        ScheduleFragment scheduleFragment = new ScheduleFragment();
+        scheduleFragment.setArguments(petUid);
+        ((FragmentActivity) requireContext()).getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.zoom_in_enter, R.anim.zoom_in_exit, R.anim.zoom_out_enter, R.anim.zoom_out_exit)
+                .replace(R.id.frameLayout, scheduleFragment, "SCHEDULES")
+                .addToBackStack(null)
+                .commit();
     }
 }
