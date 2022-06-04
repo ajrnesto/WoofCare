@@ -16,4 +16,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@android:color/transparent" />
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFullImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivFullImage"
+        app:layout_constraintStart_toStartOf="@+id/ivFullImage"
+        app:layout_constraintTop_toTopOf="@+id/ivFullImage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

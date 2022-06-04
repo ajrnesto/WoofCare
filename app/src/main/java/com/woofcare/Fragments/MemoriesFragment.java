@@ -152,6 +152,18 @@ public class MemoriesFragment extends Fragment implements MemoryAdapter.OnMemory
 
     @Override
     public void onMemoryClick(int position) {
+        Bundle memoryBundle = new Bundle();
+        memoryBundle.putString("memory_uid", arrMemories.get(position).getUid());
+        memoryBundle.putString("memory_title", arrMemories.get(position).getTitle());
+        memoryBundle.putString("memory_journal", arrMemories.get(position).getJournal());
+        memoryBundle.putLong("memory_timestamp", arrMemories.get(position).getTimestamp());
 
+        ViewMemoryFragment viewMemoryFragment = new ViewMemoryFragment();
+        viewMemoryFragment.setArguments(memoryBundle);
+        ((FragmentActivity) requireContext()).getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.zoom_in_enter, R.anim.zoom_in_exit, R.anim.zoom_out_enter, R.anim.zoom_out_exit)
+                .replace(R.id.frameLayout, viewMemoryFragment, "VIEW_MEMORY")
+                .addToBackStack(null)
+                .commit();
     }
 }

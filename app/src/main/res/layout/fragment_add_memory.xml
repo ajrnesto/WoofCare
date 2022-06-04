@@ -106,8 +106,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/btnSave"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnInsertPhoto"
-                tools:targetApi="s" />
+                app:layout_constraintTop_toBottomOf="@+id/btnInsertPhoto" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSave"

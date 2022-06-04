@@ -17,10 +17,10 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.woofcare.R;
 
-public class ViewLocalImageDialog extends AppCompatDialogFragment {
+public class ViewImageDialog extends AppCompatDialogFragment {
 
     ImageView ivFullImage;
-    String imageStringUri;
+    String photoUrl;
     CircularProgressIndicator loadingBar;
 
     @NonNull
@@ -31,9 +31,9 @@ public class ViewLocalImageDialog extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.dialog_full_image, null);
 
         initiate(view);
-        if (requireArguments().getString("image_local_string_uri") != null) {
-            imageStringUri = requireArguments().getString("image_local_string_uri");
-            Picasso.get().load(Uri.parse(imageStringUri)).into(ivFullImage, new Callback() {
+        if (requireArguments().getString("photo_url") != null) {
+            photoUrl = requireArguments().getString("photo_url");
+            Picasso.get().load(Uri.parse(photoUrl)).into(ivFullImage, new Callback() {
                 @Override
                 public void onSuccess() {
                     loadingBar.hide();

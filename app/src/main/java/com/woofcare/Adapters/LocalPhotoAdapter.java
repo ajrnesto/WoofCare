@@ -60,7 +60,7 @@ public class LocalPhotoAdapter extends RecyclerView.Adapter<LocalPhotoAdapter.lo
                     args.putString("image_local_string_uri", arrUri.get(getAdapterPosition()).toString());
                     ViewLocalImageDialog viewLocalImage = new ViewLocalImageDialog();
                     viewLocalImage.setArguments(args);
-                    viewLocalImage.show(((FragmentActivity)context).getSupportFragmentManager(), "TAG");
+                    viewLocalImage.show(((FragmentActivity)context).getSupportFragmentManager(), "VIEW_LOCAL_IMAGE");
                 }
             });
 

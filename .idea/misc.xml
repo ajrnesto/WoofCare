@@ -34,7 +34,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_event.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_pet.xml" value="0.22" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/cardview_photo.xml" value="0.2" />
-        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/dialog_full_image.xml" value="0.12" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/dialog_full_image.xml" value="0.33" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_event.xml" value="0.15" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_memory.xml" value="0.14" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_add_pet.xml" value="0.22" />
@@ -42,6 +42,7 @@
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_pets.xml" value="0.16" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_profile.xml" value="0.1341216216216216" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_schedule.xml" value="0.1341216216216216" />
+        <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/fragment_view_memory.xml" value="0.17" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/list_item.xml" value="0.1341216216216216" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/nav_header.xml" value="0.2" />
         <entry key="..\:/Users/ajrne/AndroidStudioProjects/WoofCare/app/src/main/res/layout/toolbar.xml" value="0.2" />

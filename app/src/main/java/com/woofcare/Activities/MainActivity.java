@@ -1,5 +1,12 @@
 package com.woofcare.Activities;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,13 +14,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
@@ -30,9 +30,10 @@ import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 import com.woofcare.Fragments.AddMemoryFragment;
 import com.woofcare.Fragments.AddPetFragment;
-import com.woofcare.Fragments.PetsFragment;
 import com.woofcare.Fragments.MemoriesFragment;
+import com.woofcare.Fragments.PetsFragment;
 import com.woofcare.Fragments.ScheduleFragment;
+import com.woofcare.Fragments.ViewMemoryFragment;
 import com.woofcare.R;
 import com.woofcare.Utils.Utils;
 
@@ -85,12 +86,17 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.addOnBackStackChangedListener(() -> {
             AddPetFragment addPetFragment = (AddPetFragment) getSupportFragmentManager().findFragmentByTag("ADD_PET");
             AddMemoryFragment addMemoryFragment = (AddMemoryFragment) getSupportFragmentManager().findFragmentByTag("ADD_MEMORY");
+            ViewMemoryFragment viewMemoryFragment = (ViewMemoryFragment) getSupportFragmentManager().findFragmentByTag("VIEW_MEMORY");
 
             if (addPetFragment != null && addPetFragment.isVisible()) {
                 tvActivityTitle.setText("");
                 cvActionBar.setVisibility(View.VISIBLE);
             }
             else if (addMemoryFragment != null && addMemoryFragment.isVisible()) {
+                tvActivityTitle.setText("");
+                cvActionBar.setVisibility(View.VISIBLE);
+            }
+            else if (viewMemoryFragment != null && viewMemoryFragment.isVisible()) {
                 tvActivityTitle.setText("");
                 cvActionBar.setVisibility(View.VISIBLE);
             }
