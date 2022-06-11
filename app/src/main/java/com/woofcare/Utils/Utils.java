@@ -2,12 +2,16 @@ package com.woofcare.Utils;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.webkit.MimeTypeMap;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Utils {
     public static float dpToPx(Context context, float valueInDp) {
@@ -36,5 +40,15 @@ public class Utils {
         ContentResolver cR = context.getContentResolver();
         MimeTypeMap mime = MimeTypeMap.getSingleton();
         return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
+    public static Set<String> getStringSet(Context context, String key){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("woofcare_cache", Context.MODE_PRIVATE);
+        return sharedPreferences.getStringSet(key, new HashSet<>());
+    }
+
+    public static void setStringSet(Context context, String key, Set<String> set){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("woofcare_cache", Context.MODE_PRIVATE);
+        sharedPreferences.edit().putStringSet(key, set).apply();
     }
 }

@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
-import com.woofcare.Fragments.AddEventFragment;
+import com.woofcare.Fragments.AddScheduleFragment;
 import com.woofcare.Fragments.AddMemoryFragment;
 import com.woofcare.Fragments.AddPetFragment;
 import com.woofcare.Fragments.MemoriesFragment;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.addOnBackStackChangedListener(() -> {
             AddPetFragment addPetFragment = (AddPetFragment) getSupportFragmentManager().findFragmentByTag("ADD_PET");
             AddMemoryFragment addMemoryFragment = (AddMemoryFragment) getSupportFragmentManager().findFragmentByTag("ADD_MEMORY");
-            AddEventFragment addEventFragment = (AddEventFragment) getSupportFragmentManager().findFragmentByTag("ADD_EVENT");
+            AddScheduleFragment addScheduleFragment = (AddScheduleFragment) getSupportFragmentManager().findFragmentByTag("ADD_EVENT");
             ViewMemoryFragment viewMemoryFragment = (ViewMemoryFragment) getSupportFragmentManager().findFragmentByTag("VIEW_MEMORY");
 
             if (addPetFragment != null && addPetFragment.isVisible()) {
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 tvActivityTitle.setText("");
                 cvActionBar.setVisibility(View.VISIBLE);
             }
-            else if (addEventFragment != null && addEventFragment.isVisible()) {
+            else if (addScheduleFragment != null && addScheduleFragment.isVisible()) {
                 tvActivityTitle.setText("");
                 cvActionBar.setVisibility(View.VISIBLE);
             }

@@ -1,10 +1,17 @@
 package com.woofcare.Fragments;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
@@ -25,15 +32,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.woofcare.Notifications.BroadcastReceiver;
 import com.woofcare.Objects.Pet;
 import com.woofcare.Objects.Schedule;
 import com.woofcare.R;
+import com.woofcare.Utils.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Set;
 
-public class AddEventFragment extends Fragment {
+public class AddScheduleFragment extends Fragment {
 
     private static final FirebaseDatabase WOOF_CARE_DB = FirebaseDatabase.getInstance();
     private static final FirebaseUser USER = FirebaseAuth.getInstance().getCurrentUser();
@@ -68,6 +78,7 @@ public class AddEventFragment extends Fragment {
         initialize();
         initializeSpinner();
         initializeDatePicker();
+        createNotificationChannel();
 
         etDate.setOnClickListener(view -> {
             etDate.setEnabled(false);
@@ -79,12 +90,7 @@ public class AddEventFragment extends Fragment {
             timePicker.show(getParentFragmentManager(), "Time Picker");
         });
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveSchedule();
-            }
-        });
+        btnSave.setOnClickListener(view -> saveSchedule());
 
         return view;
     }
@@ -105,7 +111,7 @@ public class AddEventFragment extends Fragment {
     private void initializeSpinner() {
         arrPets = new ArrayList<>();
         pets = new ArrayList<>();
-        categories = new String[] {"Vaccination", "Medication", "Food"};
+        categories = new String[] {"Food", "Exercise", "Medication", "Vaccination"};
         adapterCategories = new ArrayAdapter<>(getContext(), R.layout.list_item, categories);
         menuCategories.setAdapter(adapterCategories);
 
@@ -199,19 +205,52 @@ public class AddEventFragment extends Fragment {
         calendarMergedFromDateAndTimePicker.set(Calendar.MINUTE, calendarFromTimePicker.get(Calendar.MINUTE));
         calendarMergedFromDateAndTimePicker.set(Calendar.SECOND, 0);
 
-        dbNewSchedule = WOOF_CARE_DB.getReference("user_"+USER.getUid()+"_schedules").push();
+        // instead of pushing new uid, use timestamp as uid to automatically sort by timestamp
+        long timestamp = calendarMergedFromDateAndTimePicker.getTimeInMillis();
+        dbNewSchedule = WOOF_CARE_DB.getReference("user_"+USER.getUid()+"_schedules").child(String.valueOf(timestamp));
 
-        String uid = dbNewSchedule.getKey();
+        String uid = String.valueOf(timestamp);
         String petUid = arrPets.get(petAdapterPosition).getUid();
         String title = etTitle.getText().toString();
         String details = etDetails.getText().toString();
-        long timestamp = calendarMergedFromDateAndTimePicker.getTimeInMillis();
         String category = menuCategories.getText().toString();
 
         Schedule newSchedule = new Schedule(uid, petUid, title, details, timestamp, category);
         dbNewSchedule.setValue(newSchedule);
 
+        // add alarm
+        Set<String> cachedAlarms = Utils.getStringSet(context, "alarms");
+        if (!cachedAlarms.contains(String.valueOf(timestamp))) {
+            Intent intent = new Intent(context, BroadcastReceiver.class);
+            intent.putExtra("title", title);
+            intent.putExtra("details", details);
+
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, timestamp, pendingIntent);
+
+            cachedAlarms.add(String.valueOf(timestamp));
+            Utils.setStringSet(context, "alarms", cachedAlarms);
+        }
+
+        // end add alarm
+
+        InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+
         Toast.makeText(context, "New event has been scheduled", Toast.LENGTH_SHORT).show();
         requireActivity().onBackPressed();
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "WoofCare Notifications";
+            String description = "WoofCare Notifications";
+            NotificationChannel channel = new NotificationChannel("woofcare_notifications", name, NotificationManager.IMPORTANCE_MAX);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }
