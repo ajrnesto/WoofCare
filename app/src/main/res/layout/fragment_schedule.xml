@@ -10,15 +10,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            style="@style/WoofCare.TextView.Large"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSortBy"
+            style="@style/WoofCare.DropDownMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Schedule"
+            android:layout_marginEnd="8dp"
+            android:hint="Sort by"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilSortBy" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            style="@style/WoofCare.TextView.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No events scheduled yet"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/ebtnAddEvent"
+            style="@style/WoofCare.Button.Floating.Extended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Add Event"
+            app:icon="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

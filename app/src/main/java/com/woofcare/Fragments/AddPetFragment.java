@@ -22,8 +22,6 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.timepicker.MaterialTimePicker;
-import com.google.android.material.timepicker.TimeFormat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -52,13 +50,13 @@ public class AddPetFragment extends Fragment {
 
     View view;
     TextInputEditText etName, etBirthday;
-    AutoCompleteTextView menuSex;
     MaterialButton btnSave;
     RoundedImageView imgPet;
     MaterialCardView cvLoading;
 
     String[] sexes;
     ArrayAdapter<String> adapterSex;
+    AutoCompleteTextView menuSex;
 
     MaterialDatePicker.Builder<Long> builderDatePicker;
     MaterialDatePicker<Long> datePicker;

@@ -42,10 +42,10 @@
         <item name="backgroundTint">?colorSecondaryVariant</item>
         <item name="iconTint">?colorPrimary</item>
         <item name="android:textColor">?colorPrimary</item>
-        <item name="shapeAppearance">@style/WoofCare.Button.Floating.Extended.ShapeAppearance</item>
     </style>
 
-    <style name="WoofCare.Button.Floating.Extended.ShapeAppearance" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
-        <item name="cornerRadius">16dp</item>
+    <style name="WoofCare.Button.Floating.Extended.ShapeAppearance" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100dp</item>
     </style>
 </resources>

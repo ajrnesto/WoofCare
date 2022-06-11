@@ -28,6 +28,7 @@
             android:id="@+id/tvTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:fontFamily="@font/plusjakartasans_regular"
             android:textColor="?colorPrimary"
             android:textSize="14sp"

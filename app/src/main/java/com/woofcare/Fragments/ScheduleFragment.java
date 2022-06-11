@@ -9,8 +9,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.textfield.TextInputLayout;
 import com.woofcare.R;
 
 import java.util.Objects;
@@ -19,6 +22,9 @@ public class ScheduleFragment extends Fragment {
 
     View view;
     Context context;
+
+    TextInputLayout tilSortBy;
+    ExtendedFloatingActionButton ebtnAddEvent;
 
     String argsPetUid;
     boolean hasPetSelected = false;
@@ -38,11 +44,22 @@ public class ScheduleFragment extends Fragment {
 
         initialize();
 
+        ebtnAddEvent.setOnClickListener(view -> {
+            AddEventFragment addEventFragment = new AddEventFragment();
+            ((FragmentActivity) requireContext()).getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.zoom_in_enter, R.anim.zoom_in_exit, R.anim.zoom_out_enter, R.anim.zoom_out_exit)
+                    .replace(R.id.frameLayout, addEventFragment, "ADD_EVENT")
+                    .addToBackStack(null)
+                    .commit();
+        });
+
         return view;
     }
 
     private void initialize() {
         context = getContext();
+        tilSortBy = view.findViewById(R.id.tilSortBy);
+        ebtnAddEvent = view.findViewById(R.id.ebtnAddEvent);
 
         if (getArguments() == null) {
             hasPetSelected = false;

@@ -16,5 +16,7 @@
         <!-- Customize your theme here.
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item> -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorAccent">@color/blue_ocean_drive</item>
     </style>
 </resources>
